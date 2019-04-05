@@ -1,6 +1,4 @@
-# SVR303 - Cloud Next Session 
-
-Build Solutions With Serverless on Kubernetes Engine
+# SVR303 - Build Solutions With Serverless on Kubernetes Engine
 
 > Make sure to [reset](#Reset) envirnment before demos
 
