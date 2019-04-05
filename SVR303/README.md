@@ -25,7 +25,9 @@ https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/g
 
 ## Demos
 
-### Demo 1
+### Demo 1 - Cloud Build Integration
+
+Cloud Run takes images, in this demo we will show you how to create your service image and deploy it to Cloud Run using Cloud Build
 
 * MaxpPime (http://maxprime.next.demome.tech/)
   * Highlight release number
@@ -39,15 +41,15 @@ https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/g
 * Back to browser to show new version in maxprime (http://maxprime.next.demome.tech/)
 
 
-### Demo 2
+### Demo 2 - Cloud Build Notification Events in Slack
 
-* Cloud Build publishes status to PubSub (global, simple, reliable MQ)
-* In this demo we will:
-  * Create PubSub Push Subscription
-  * Deploy Notification Service (custom)
-* Notification Service source (https://github.com/mchmarny/pubsubnotifs)
+In this demo we will:
+
+* Create status subscription in PubSub (global, simple, reliable MQ)
+* Deploy notification service (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
   * Sender (send builds Slack message from status and sends)
+
 * Deploy to Cloud Run (highlight env vars, shared token)
 
 ```shell
@@ -67,16 +69,20 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
 * Repeat release tagging process
   * GitHub (https://github.com/mchmarny/maxprime)
   * Create a release (release-v0.0.*)
-* Overview, builds on previous use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
+* Overview, builds on previous use-case
+![Cloud Build Integration with Slack Notifications](img/cbn.png "Cloud Build Integration with Slack Notifications")
 * Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
   * Show build progress (don't watch, will take longer, ~1.5min)
 * Slack to show the notification
   * Use slack link to navigate to build history
 
 
-### Demo 3
+### Demo 3 - Microservices (External/Internal Services)
 
-* Setup microservice use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g55d2018883_1_612)
+In this demo we will show simple microservice using GCP Vision API
+
+![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
+
 * Demo service
   * Show image (https://storage.googleapis.com/kdemo-logos/0.png)
   * Run image through service and show "Google" identified
@@ -88,9 +94,11 @@ curl -H "Content-Type: application/json" \
 ```
 
 * Illustrate problem statement (credits)
-  * Fronting UI App to Auth (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g54f31d07c4_0_1030)
+  * Fronting UI App to Auth
+![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
   * Show UI (https://kdemo.next.demome.tech/)
-  * Show circumventing Auth by direct Logo service access (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g55ef51deb0_1_54)
+  * Users still can circumvent Auth by direct Logo service access
+![Auth Microservice fronting Logo Service](img/ms-3.png "Auth Microservice fronting Logo Service")
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -108,5 +116,7 @@ curl -H "Content-Type: application/json" -v \
      -X POST https://klogo.next.demome.tech/
 ```
 
-* Show final overview of internal services (+ User Microservice to metering) and external UI (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g55d2018883_1_586)
+* Show final overview of internal services (+ User Microservice to metering) and external UI
+
+![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
 
