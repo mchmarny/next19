@@ -65,6 +65,8 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
   * Got to repo in GitHub (https://github.com/mchmarny/maxprime)
   * Navigate to Release and Create a release (release-v0.0.*)
 * Overview, builds on previous build use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
+* Go to Cloud Build in UI console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+  * Show build progress (don't watch, will take longer)
 * Switch to Slack to show the notification
   * Use slack link to navigate to build history
 
