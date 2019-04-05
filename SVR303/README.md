@@ -21,17 +21,18 @@ Also, reset the Cloud Run KLogo service to `External`
 
 https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/general?project=s9-demo
 
-## Demos
 
+
+## Demos
 
 ### Demo 1
 
-* Show maxprime app in browser (http://maxprime.next.demome.tech/)
+* MaxpPime (http://maxprime.next.demome.tech/)
   * Highlight release number
-* Got to repo in GitHub (https://github.com/mchmarny/maxprime)
-  * Navigate to Release and Create a release (release-v0.0.*)
+  * Follow link to github (https://github.com/mchmarny/maxprime)
+  * Create a release (release-v0.0.*)
   * Show build file (/deployments/next-demo-build.yaml)
-* Go to Cloud Build in UI console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+* Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
   * Show build progress (don't watch, will take longer)
 * Switch to slide for overview (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_162)
 * Back to browser to show new version in maxprime (http://maxprime.next.demome.tech/)
@@ -39,13 +40,14 @@ https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/g
 
 ### Demo 2
 
-* Cloud Build publishes build status to PubSub (global, simple, reliable MQ)
-  * PubSub Push Subscription
-  * Notification Service (custom service)
-* Show Notification Service source (https://github.com/mchmarny/pubsubnotifs)
+* Cloud Build publishes status to PubSub (global, simple, reliable MQ)
+* In this demo we will:
+  * Create PubSub Push Subscription
+  * Deploy Notification Service (custom)
+* Notification Service source (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
   * Sender (send builds Slack message from status and sends)
-* Deploy Notification Service to Cloud Run (highlight env vars)
+* Deploy to Cloud Run (highlight env vars, shared token)
 
 ```shell
 gcloud beta run deploy pubsubnotifs \
@@ -61,19 +63,19 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
     --push-endpoint=https://pubsubnotifs.next.demome.tech/push?token=$KNOWN_PUBLISHER_TOKENS
 ```
 
-* Repeat release tagging release process
-  * Got to repo in GitHub (https://github.com/mchmarny/maxprime)
-  * Navigate to Release and Create a release (release-v0.0.*)
-* Overview, builds on previous build use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
-* Go to Cloud Build in UI console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
-  * Show build progress (don't watch, will take longer)
-* Switch to Slack to show the notification
+* Repeat release tagging process
+  * GitHub (https://github.com/mchmarny/maxprime)
+  * Create a release (release-v0.0.*)
+* Overview, builds on previous use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
+* Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+  * Show build progress (don't watch, will take longer, ~1.5min)
+* Slack to show the notification
   * Use slack link to navigate to build history
 
 
 ### Demo 3
 
-* Setup use-case in topology slide (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g55d2018883_1_612)
+* Setup microservice use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g55d2018883_1_612)
 * Demo service
   * Show image (https://storage.googleapis.com/kdemo-logos/0.png)
   * Run image through service and show "Google" identified
