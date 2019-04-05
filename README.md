@@ -4,7 +4,7 @@ Setup and demo scripts for Google Cloud Next 2019
 
 ## Sessions
 
-* [SVR206]() - Knative a Year Later: Serverless, Kubernetes and You
+* [SVR206](/SVR303) - Knative a Year Later: Serverless, Kubernetes and You
 * [SVR303]() - Build Solutions With Serverless on Kubernetes Engine
 * [HYB218]() - Run a serverless platform anywhere with Kubernetes and Knative
 * [SVR305]() - Generating Events from Your Internal Systems with Knative
