@@ -2,7 +2,7 @@
 
 Build Solutions With Serverless on Kubernetes Engine
 
-> Make sure to [[Reset]] envirnment before demos
+> Make sure to [Reset]() envirnment before demos
 
 ## Demos
 
