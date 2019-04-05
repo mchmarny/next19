@@ -34,7 +34,9 @@ https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/g
   * Show build file (/deployments/next-demo-build.yaml)
 * Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
   * Show build progress (don't watch, will take longer)
-* Switch to slide for overview (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_162)
+
+![Cloud Build Integration](img/cb.png "Cloud Build Integration")
+
 * Back to browser to show new version in maxprime (http://maxprime.next.demome.tech/)
 
 
