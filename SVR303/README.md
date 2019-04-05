@@ -39,7 +39,13 @@ https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/g
 
 ### Demo 2
 
-* Deploy notification service to Cloud Run UI
+* Cloud Build publishes build status to PubSub (global, simple, reliable MQ)
+  * PubSub Push Subscription
+  * Notification Service (custom service)
+* Show Notification Service source (https://github.com/mchmarny/pubsubnotifs)
+  * Handler (receives Build status from PubSub push)
+  * Sender (send builds Slack message from status and sends)
+* Deploy Notification Service to Cloud Run (highlight env vars)
 
 ```shell
 gcloud beta run deploy pubsubnotifs \
@@ -55,13 +61,12 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
     --push-endpoint=https://pubsubnotifs.next.demome.tech/push?token=$KNOWN_PUBLISHER_TOKENS
 ```
 
-* Repeat release tag process
+* Repeat release tagging release process
   * Got to repo in GitHub (https://github.com/mchmarny/maxprime)
   * Navigate to Release and Create a release (release-v0.0.*)
-  * Switch to slide for overview (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
+* Overview, builds on previous build use-case (https://docs.google.com/presentation/d/16bKzW04hsjUQn6kJpwwCT7XuknJF1cL1Hue8M3xZBSo/edit?pli=1#slide=id.g557063e379_3_674)
 * Switch to Slack to show the notification
   * Use slack link to navigate to build history
-
 
 
 ### Demo 3
