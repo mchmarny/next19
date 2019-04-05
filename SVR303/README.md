@@ -1,4 +1,4 @@
-# SVR303
+# Cloud Next - Session SVR303
 
 Build Solutions With Serverless on Kubernetes Engine
 
