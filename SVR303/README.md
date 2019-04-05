@@ -2,26 +2,7 @@
 
 Build Solutions With Serverless on Kubernetes Engine
 
-## Reset
-
-Run this before each demo to set know state
-
-```shell
-# Delete PubSub push subscription
-gcloud pubsub subscriptions delete cloud-build-push-notif-demo
-
-# Delete Notification Service in CR
-gcloud beta run services delete pubsubnotifs
-
-# Delete Knative Eventing Sources (subscriptions in PubSub)
-
-```
-
-Also, reset the Cloud Run KLogo service to `External`
-
-https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/general?project=s9-demo
-
-
+> Make sure to [[Reset]] envirnment before demos
 
 ## Demos
 
@@ -119,4 +100,24 @@ curl -H "Content-Type: application/json" -v \
 * Show final overview of internal services (+ User Microservice to metering) and external UI
 
 ![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
+
+
+## Reset
+
+Run this before each demo to set know state
+
+```shell
+# Delete PubSub push subscription
+gcloud pubsub subscriptions delete cloud-build-push-notif-demo
+
+# Delete Notification Service in CR
+gcloud beta run services delete pubsubnotifs
+
+# Delete Knative Eventing Sources (subscriptions in PubSub)
+
+```
+
+Also, reset the Cloud Run KLogo service to `External`
+
+https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/general?project=s9-demo
 
