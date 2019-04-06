@@ -9,15 +9,13 @@
 Cloud Run takes images, in this demo we will show you how to create your service image and deploy it to Cloud Run using Cloud Build
 
 * MaxpPime (http://maxprime.next.demome.tech/)
-  * Highlight release number
-  * Follow link to github (https://github.com/mchmarny/maxprime)
-  * Create a release (release-v0.0.*)
-  * Show build file (/deployments/next-demo-build.yaml)
+  * Highlight release number, follow link
+  * Create new release (release-v0.0.*)
 * Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
-  * Show build progress (don't watch, will take longer)
-* Walk through the flow in overview
+  * Detail on build, Show progress (don't watch, will take longer)
+* Overview Cloud Build Integration
 ![Cloud Build Integration](img/cb.png "Cloud Build Integration")
-* Back to browser to show new version in maxprime (http://maxprime.next.demome.tech/)
+* Back to browser to show new release version 
 
 
 ### Demo 2 - Cloud Build Notification Events in Slack
@@ -27,20 +25,20 @@ In this demo we will:
 * Review notification service (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
   * Sender (send builds Slack message from status and sends)
+* Deploy it to Cloud Run (highlight conf, shared token)
+
+```shell
+gcloud beta run deploy pubsubnotifs \
+    --image gcr.io/s9-demo/pubsubnotifs:latest \
+    --set-env-vars=NOTIFS_FOR_APP=maxprime,SLACK_API_TOKEN=$SLACK_API_TOKEN,SLACK_BUILD_STATUS_CHANNEL=$SLACK_BUILD_STATUS_CHANNEL,KNOWN_PUBLISHER_TOKENS=$KNOWN_PUBLISHER_TOKENS
+```
+
 * Create build status subscription in PubSub (global, simple, reliable MQ)
 
 ```shell
 gcloud pubsub subscriptions create cloud-build-push-notif-demo \
     --topic=cloud-builds --ack-deadline=60 --message-retention-duration=1h \
     --push-endpoint=https://pubsubnotifs.next.demome.tech/push?token=$KNOWN_PUBLISHER_TOKENS
-```
-
-* Deploy to Cloud Run (highlight shared token)
-
-```shell
-gcloud beta run deploy pubsubnotifs \
-    --image gcr.io/s9-demo/pubsubnotifs:latest \
-    --set-env-vars=NOTIFS_FOR_APP=maxprime,SLACK_API_TOKEN=$SLACK_API_TOKEN,SLACK_BUILD_STATUS_CHANNEL=$SLACK_BUILD_STATUS_CHANNEL,KNOWN_PUBLISHER_TOKENS=$KNOWN_PUBLISHER_TOKENS
 ```
 
 * Repeat release tagging process (https://github.com/mchmarny/maxprime)
