@@ -48,6 +48,6 @@ kubectl config current-context
 Switch between clusters
 
 ```
-kubectl config use-context next-demo
+kubectl config use-context next
 kubectl config use-context kn-05
 ```
