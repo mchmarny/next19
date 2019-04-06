@@ -1,6 +1,6 @@
 # SVR303 - Build Solutions With Serverless on Kubernetes Engine
 
-> Make sure to [reset](#Reset) envirnment before demos
+> Make sure to [reset](#Reset) environment before demos
 
 ## Demos
 
@@ -111,8 +111,8 @@ gcloud pubsub subscriptions delete cloud-build-push-notif-demo
 # Delete Notification Service in CR
 gcloud beta run services delete pubsubnotifs
 
-# Delete Knative Eventing Sources (subscriptions in PubSub)
-
+# Delete Knative Eventing Sources (subscriptions in PubSub, prevent dup notifications)
+kubectl delete -f /go/src/github.com/mchmarny/knative-build-status-notifs/config/trigger.yaml -n demo
 ```
 
 Also, reset the Cloud Run KLogo service to `External`
