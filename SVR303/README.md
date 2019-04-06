@@ -24,20 +24,10 @@ Cloud Run takes images, in this demo we will show you how to create your service
 
 In this demo we will:
 
-* Create status subscription in PubSub (global, simple, reliable MQ)
-* Deploy notification service (https://github.com/mchmarny/pubsubnotifs)
+* Review notification service (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
   * Sender (send builds Slack message from status and sends)
-
-* Deploy to Cloud Run (highlight env vars, shared token)
-
-```shell
-gcloud beta run deploy pubsubnotifs \
-    --image gcr.io/s9-demo/pubsubnotifs:latest \
-    --set-env-vars=NOTIFS_FOR_APP=maxprime,SLACK_API_TOKEN=$SLACK_API_TOKEN,SLACK_BUILD_STATUS_CHANNEL=$SLACK_BUILD_STATUS_CHANNEL,KNOWN_PUBLISHER_TOKENS=$KNOWN_PUBLISHER_TOKENS
-```
-
-* Create PubSub Push Subscription
+* Create build status subscription in PubSub (global, simple, reliable MQ)
 
 ```shell
 gcloud pubsub subscriptions create cloud-build-push-notif-demo \
@@ -45,15 +35,20 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
     --push-endpoint=https://pubsubnotifs.next.demome.tech/push?token=$KNOWN_PUBLISHER_TOKENS
 ```
 
-* Repeat release tagging process
-  * GitHub (https://github.com/mchmarny/maxprime)
-  * Create a release (release-v0.0.*)
+* Deploy to Cloud Run (highlight shared token)
+
+```shell
+gcloud beta run deploy pubsubnotifs \
+    --image gcr.io/s9-demo/pubsubnotifs:latest \
+    --set-env-vars=NOTIFS_FOR_APP=maxprime,SLACK_API_TOKEN=$SLACK_API_TOKEN,SLACK_BUILD_STATUS_CHANNEL=$SLACK_BUILD_STATUS_CHANNEL,KNOWN_PUBLISHER_TOKENS=$KNOWN_PUBLISHER_TOKENS
+```
+
+* Repeat release tagging process (https://github.com/mchmarny/maxprime)
+* Slack to show `WORKING` notification 
+  * Use link to Cloud Build status 
 * Overview, builds on previous use-case
 ![Cloud Build Integration with Slack Notifications](img/cbn.png "Cloud Build Integration with Slack Notifications")
-* Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
-  * Show build progress (don't watch, will take longer, ~1.5min)
-* Slack to show the notification
-  * Use slack link to navigate to build history
+* Back to Slack to show `SUCCESS` notification 
 
 
 ### Demo 3 - Microservices (External/Internal Services)
