@@ -12,15 +12,17 @@ cd /go/src/github.com/mchmarny/knative-build-status-notifs
 code .
 ```
 
+![Cloud Build Integration with Slack Notifications](img/demo1.png "Cloud Build Integration with Slack Notifications")
+
 ### Notification service
 
-Source code (https://github.com/mchmarny/knative-build-status-notifs): 
+Source code (https://github.com/mchmarny/knative-build-status-notifs):
 * **Handler** - extracts Cloud Build notification from received Cloud Event
 * **Sender** - creates message from Cloud Build notification and sends it to Slack
 
 > The `build-notif` expects `POST`, still you can check if it is installed by goign to https://build-notif.demo.knative.tech/ (`Invalid request` expected)
 
-### Trigger 
+### Trigger
 
 Apply following YAML (`config/trigger.yaml`)
 
@@ -37,7 +39,7 @@ spec:
       name: build-notif
 ```
 
-Using `kubectl` 
+Using `kubectl`
 
 ```shell
 kubectl apply -f config/trigger.yaml -n demo
@@ -49,7 +51,7 @@ Should return
 trigger.eventing.knative.dev/slacker-build-status-notifier created
 ```
 
-Verify that `slacker-build-status-notifier` trigger was created 
+Verify that `slacker-build-status-notifier` trigger was created
 
 ```shell
 kubectl get triggers -n demo
@@ -77,6 +79,8 @@ slacker-build-status-notifier  True                default   http://build-notif.
 cd /go/src/github.com/mchmarny/twitter
 code .
 ```
+
+![Twitter event source and wire it to Knative service](img/demo2.png "Twitter event source and wire it to Knative service")
 
 ### UI
 
@@ -128,7 +132,7 @@ spec:
 
 ```
 
-Using `kubectl` 
+Using `kubectl`
 
 ```shell
 kubectl apply -f config/source.yaml -n demo
@@ -175,7 +179,7 @@ spec:
       name: tevents
 ```
 
-Using `kubectl` 
+Using `kubectl`
 
 ```shell
 kubectl apply -f config/trigger.yaml -n demo
