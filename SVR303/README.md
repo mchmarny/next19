@@ -74,7 +74,7 @@ curl -H "Content-Type: application/json" \
 
 ```shell
 curl -H "Content-Type: application/json" \
-     -d '{ "id": "next-demo", "url": "https://storage.googleapis.com/kdemo-logos/0.png" }' \
+     -d '{ "id": "logo2", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
@@ -84,7 +84,7 @@ curl -H "Content-Type: application/json" \
 
 ```shell
 curl -H "Content-Type: application/json" -v \
-     -d '{ "id": "next-demo", "url": "https://storage.googleapis.com/kdemo-logos/0.png" }' \
+     -d '{ "id": "logo3", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
      -X POST https://klogo.next.demome.tech/
 ```
 
