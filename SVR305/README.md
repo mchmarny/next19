@@ -3,7 +3,7 @@
 > Make sure to [reset](#Reset) environment before demos
 
 
-## Demo 1 - How to create Cloud Build notification events trigger and wiring it to Knative service
+## Demo 1 - Cloud Build status event triggering Knative service
 
 ### Setup
 
