@@ -12,15 +12,17 @@ cd /go/src/github.com/mchmarny/knative-build-status-notifs
 code .
 ```
 
-First, lets review the notification service we already have installed (https://github.com/mchmarny/knative-build-status-notifs)
+### Notification service
 
-* Handler - extracts Cloud Build notification from received Cloud Event
-* Sender - creates message from Cloud Build notification and sends it to Slack
+Source code (https://github.com/mchmarny/knative-build-status-notifs): 
+* **Handler** - extracts Cloud Build notification from received Cloud Event
+* **Sender** - creates message from Cloud Build notification and sends it to Slack
 
-> The `build-notif` expects `POST` but you can check if installed by goign to https://build-notif.demo.knative.tech/. The response should be `Invalid request`
+> The `build-notif` expects `POST`, still you can check if it is installed by goign to https://build-notif.demo.knative.tech/ (`Invalid request` expected)
 
+### Trigger 
 
-Now, create a trigger by applying following YAML (`config/trigger.yaml`)
+Apply following YAML (`config/trigger.yaml`)
 
 ```yaml
 apiVersion: eventing.knative.dev/v1alpha1
@@ -45,7 +47,7 @@ Should return
 trigger.eventing.knative.dev/slacker-build-status-notifier created
 ```
 
-Yu can check if the trigger was successfully installed
+You can check if the trigger was successfully installed
 
 ```shell
 kubectl get triggers -n demo
