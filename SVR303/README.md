@@ -61,7 +61,7 @@ In this demo we will show simple microservice using GCP Vision API
 
 ```shell
 curl -H "Content-Type: application/json" \
-     -d '{ "id": "next-demo", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
+     -d '{ "id": "logo1", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
