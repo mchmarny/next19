@@ -57,7 +57,7 @@ Should return
 
 ```shell
 NAME                           READY     REASON    BROKER    SUBSCRIBER_URI                               AGE
-slacker-build-status-notifier   True                default   http://build-notif.demo.svc.cluster.local/   37s
+slacker-build-status-notifier  True                default   http://build-notif.demo.svc.cluster.local/   37s
 ```
 
 ### Execute
