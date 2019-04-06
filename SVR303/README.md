@@ -53,12 +53,12 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
 
 In this demo we will show simple microservice using GCP Vision API
 
-![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
-
 #### Logog Service
 
+![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
+
 * Image (https://storage.googleapis.com/kdemo-logos/google.png)
-* Run image through service, and show "Google" logo identified
+* Image service ("Google" logo identified)
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -66,10 +66,11 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-#### UI App
+#### Authentication App
 
 ![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
 * Demo UI (https://kdemo.next.demome.tech/)
+
 
 #### Circumvent Auth
 
