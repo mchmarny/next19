@@ -37,6 +37,8 @@ spec:
       name: build-notif
 ```
 
+Using `kubectl` 
+
 ```shell
 kubectl apply -f config/trigger.yaml -n demo
 ```
@@ -47,7 +49,7 @@ Should return
 trigger.eventing.knative.dev/slacker-build-status-notifier created
 ```
 
-You can check if the trigger was successfully installed
+Verify that `slacker-build-status-notifier` trigger was created 
 
 ```shell
 kubectl get triggers -n demo
@@ -62,11 +64,11 @@ slacker-build-status-notifier  True                default   http://build-notif.
 
 ### Execute
 
-* Navigate to GitHub (https://github.com/mchmarny/maxprime)
-  * Create a release (release-v0.0.*)
-* You can check the build status in Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
-* Slack to show the notification
-  * Use slack link to navigate to build history
+* Create a release tag (e.g. release-v0.0.*) in GitHub (https://github.com/mchmarny/maxprime)
+* Check Cloud Build for build status (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+* View notification in Slack (#build-status)
+
+
 
 
 ## Demo 2 - How to install Twitter event source and wire it to Knative service
@@ -76,16 +78,18 @@ cd /go/src/github.com/mchmarny/twitter
 code .
 ```
 
-Navigate to UI service https://tevents.demo.knative.tech
+### UI
 
-> If everything goes well, this is where the Tweets will show
+Open https://tevents.demo.knative.tech (should be empty if soure/trigger were cleaned up)
 
 
 ### Source
 
-Now, install Twitter event source by applying following YAML (`config/source.yaml`)
+Apply following YAML (`config/source.yaml`)
 
-> `--query=KnativeDemo` is where you can define the Twitter search term (hashtag or simple string)
+> `--query=KnativeDemo` is where you can define the Twitter search term (hashtag or simple string). Secrets have already been configured.
+
+
 
 ```yaml
 apiVersion: sources.eventing.knative.dev/v1alpha1
@@ -124,6 +128,8 @@ spec:
 
 ```
 
+Using `kubectl` 
+
 ```shell
 kubectl apply -f config/source.yaml -n demo
 ```
@@ -134,7 +140,7 @@ Should return
 containersource.sources.eventing.knative.dev/twitter-source created
 ```
 
-To verify if `twitter-source` was created by listing the installed sources
+Verify that `twitter-source` source was created
 
 ```shell
 kubectl get sources -n demo
@@ -149,9 +155,9 @@ twitter-source   1d
 
 ### Trigger
 
-Now, create a trigger by applying following YAML (`config/trigger.yaml`)
+Applying following YAML (`config/trigger.yaml`)
 
-> Notice we define the `type: com.twitter` filter now
+> Notice the `type: com.twitter` filter
 
 ```yaml
 apiVersion: eventing.knative.dev/v1alpha1
@@ -169,6 +175,7 @@ spec:
       name: tevents
 ```
 
+Using `kubectl` 
 
 ```shell
 kubectl apply -f config/trigger.yaml -n demo
@@ -180,7 +187,7 @@ Should return
 trigger.eventing.knative.dev/twitter-events-viewer created
 ```
 
-Yu can check if the trigger was successfully installed
+Verity that `twitter-events-viewer` trigger was created
 
 ```shell
 kubectl get triggers -n demo
@@ -195,7 +202,7 @@ twitter-events-viewer   True              default   http://build-notif.demo.svc.
 
 ### Execute
 
-* Go back to the UI app https://tevents.demo.knative.tech
+* View UI again (https://tevents.demo.knative.tech)
 * Ask audience to tweet something with the term defined in the source's `--query=KnativeDemo` argument
 
 
@@ -205,7 +212,7 @@ twitter-events-viewer   True              default   http://build-notif.demo.svc.
 Run this before each demo to set know state
 
 ```shell
-# Delete PubSub push subscription (prevent dup notifications)
+# Delete PubSub push subscription (prevent dup notifications in Slack)
 gcloud pubsub subscriptions delete cloud-build-push-notif-demo
 
 # Demo 1
