@@ -48,6 +48,6 @@ kubectl config current-context
 Switch between clusters
 
 ```
-kubectl config use-context next
-kubectl config use-context kn-05
+gcloud container clusters get-credentials next
+gcloud container clusters get-credentials kn-05
 ```
