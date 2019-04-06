@@ -56,12 +56,12 @@ In this demo we will show simple microservice using GCP Vision API
 ![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
 
 * Demo service
-  * Show image (https://storage.googleapis.com/kdemo-logos/0.png)
+  * Show image (https://storage.googleapis.com/kdemo-logos/google.png)
   * Run image through service and show "Google" identified
 
 ```shell
 curl -H "Content-Type: application/json" \
-     -d '{ "id": "next-demo", "url": "https://storage.googleapis.com/kdemo-logos/0.png" }' \
+     -d '{ "id": "next-demo", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
