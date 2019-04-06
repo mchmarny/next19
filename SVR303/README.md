@@ -20,7 +20,7 @@ Cloud Run takes images, in this demo we will show you how to create your service
 
 ### Demo 2 - Cloud Build Notification Events in Slack
 
-In this demo we will:
+In this demo we will create a push subscription to the build status queue in Cloud PubSub which will publish build status changes to a Clour Run service which will publish these into Slack channel. 
 
 * Review notification service (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
