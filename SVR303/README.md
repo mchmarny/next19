@@ -55,9 +55,10 @@ In this demo we will show simple microservice using GCP Vision API
 
 ![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
 
-* Demo service
-  * Show image (https://storage.googleapis.com/kdemo-logos/google.png)
-  * Run image through service and show "Google" identified
+#### Logog Service
+
+* Image (https://storage.googleapis.com/kdemo-logos/google.png)
+* Run image through service, and show "Google" logo identified
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -65,11 +66,13 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-* Illustrate problem statement (credits)
-  * Fronting UI App to Auth
+#### UI App
+
 ![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
-  * Show UI (https://kdemo.next.demome.tech/)
-  * Users still can circumvent Auth by direct Logo service access
+* Demo UI (https://kdemo.next.demome.tech/)
+
+#### Circumvent Auth
+
 ![Auth Microservice fronting Logo Service](img/ms-3.png "Auth Microservice fronting Logo Service")
 
 ```shell
@@ -78,9 +81,12 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-* Navigate to Cloud Front UI (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
-  * Go to Details and switch Connectivity to `Internal`
-  * Show Logo service `HTTP/2 404` on direct access
+#### Logog Service (Internal)
+
+* Cloud Run (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
+  * Connectivity in Details to `Internal`
+
+#### Direct Logog Service Access 404
 
 ```shell
 curl -H "Content-Type: application/json" -v \
@@ -88,9 +94,11 @@ curl -H "Content-Type: application/json" -v \
      -X POST https://klogo.next.demome.tech/
 ```
 
-* Show final overview of internal services (+ User Microservice to metering) and external UI
+#### Overview
 
+* Internal microservcies (Logo and User for metering)
 ![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
+
 
 
 ## Reset
