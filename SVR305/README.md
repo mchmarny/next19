@@ -5,14 +5,14 @@
 
 ## Demo 1 - Cloud Build status event triggering Knative service
 
+![Cloud Build Integration with Slack Notifications](img/demo1.png "Cloud Build Integration with Slack Notifications")
+
 ### Setup
 
 ```shell
 cd /go/src/github.com/mchmarny/knative-build-status-notifs
 code .
 ```
-
-![Cloud Build Integration with Slack Notifications](img/demo1.png "Cloud Build Integration with Slack Notifications")
 
 ### Notification service
 
@@ -75,12 +75,14 @@ slacker-build-status-notifier  True                default   http://build-notif.
 
 ## Demo 2 - How to install Twitter event source and wire it to Knative service
 
+![Twitter event source and wire it to Knative service](img/demo2.png "Twitter event source and wire it to Knative service")
+
+### Setup
+
 ```shell
 cd /go/src/github.com/mchmarny/twitter
 code .
 ```
-
-![Twitter event source and wire it to Knative service](img/demo2.png "Twitter event source and wire it to Knative service")
 
 ### UI
 
