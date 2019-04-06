@@ -20,10 +20,10 @@ curl -H "Content-Type: application/json" \
 
 * Illustrate problem statement (credits)
   * Fronting UI App to Auth
-![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
+![Auth Microservice fronting Logo Service](../SVR303/img/ms-2.png "Auth Microservice fronting Logo Service")
   * Show UI (https://kdemo.next.demome.tech/)
   * Users still can circumvent Auth by direct Logo service access
-![Auth Microservice fronting Logo Service](img/ms-3.png "Auth Microservice fronting Logo Service")
+![Auth Microservice fronting Logo Service](../SVR303/img/ms-3.png "Auth Microservice fronting Logo Service")
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -43,7 +43,7 @@ curl -H "Content-Type: application/json" -v \
 
 * Show final overview of internal services (+ User Microservice to metering) and external UI
 
-![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
+![Microservices on Cloud Run](../SVR303/img/ms-4.png "Microservices on Cloud Run")
 
 
 ## Reset
