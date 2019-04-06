@@ -226,13 +226,12 @@ kubectl delete -f /go/src/github.com/mchmarny/twitter/config/trigger.yaml -n dem
 Make sure the `build-notif-*` is already installed
 
 ```shell
-kubectl get pods -n demo
+kubectl get kservice -n demo | grep build-notif
 ```
 
 Should return
 
 ```shell
-NAME                                 READY     STATUS    RESTARTS   AGE
-build-notif-8ztnv-84fbdc69b7-dsqr4   2/2       Running   0          2d1h
+build-notif   build-notif.demo.knative.tech   build-notif-j7nk5   build-notif-j7nk5   True
 ```
 
