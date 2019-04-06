@@ -6,7 +6,7 @@
 
 In this demo we will show simple microservice using GCP Vision API
 
-![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
+![Microservice with Vision API on Cloud Run](../SVR303/img/ms-1.png "Microservice with Vision API on Cloud Run")
 
 * Demo service
   * Show image (https://storage.googleapis.com/kdemo-logos/0.png)
