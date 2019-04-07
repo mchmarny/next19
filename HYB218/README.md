@@ -9,7 +9,7 @@ In this demo we will show simple microservice using GCP Vision API
 
 #### Logo Service
 
-![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
+![Microservice with Vision API on Cloud Run](../SVR303/img/ms-1.png "Microservice with Vision API on Cloud Run")
 
 * Image (https://storage.googleapis.com/kdemo-logos/google.png)
 * Image service ("Google" logo identified)
@@ -22,13 +22,13 @@ curl -H "Content-Type: application/json" \
 
 #### Authentication App
 
-![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
+![Auth Microservice fronting Logo Service](../SVR303/img/ms-2.png "Auth Microservice fronting Logo Service")
 * Demo UI (https://kdemo.next.demome.tech/)
 
 
 #### Circumvent Auth
 
-![Auth Microservice fronting Logo Service](img/ms-3.png "Auth Microservice fronting Logo Service")
+![Auth Microservice fronting Logo Service](../SVR303/img/ms-3.png "Auth Microservice fronting Logo Service")
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -52,7 +52,7 @@ curl -H "Content-Type: application/json" -v \
 #### Overview
 
 * Internal microservcies (Logo and User for metering)
-![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
+![Microservices on Cloud Run](../SVR303/img/ms-4.png "Microservices on Cloud Run")
 
 
 ## Reset
