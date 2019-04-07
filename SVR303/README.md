@@ -8,19 +8,19 @@
 
 Cloud Run takes images, in this demo we will show you how to create your service image and deploy it to Cloud Run using Cloud Build
 
-* MaxpPime (https://maxprime.next.demome.tech/)
+* MaxPrime (https://maxprime.next.demome.tech/)
   * Highlight release number, follow link
   * Create new release (release-v0.0.*)
 * Cloud Build in console (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
   * Detail on build, Show progress (don't watch, will take longer)
 * Overview Cloud Build Integration
 ![Cloud Build Integration](img/cb.png "Cloud Build Integration")
-* Back to browser to show new release version 
+* Back to browser to show new release version
 
 
 ### Demo 2 - Cloud Build Notification Events in Slack
 
-In this demo we will create a push subscription to the build status queue in Cloud PubSub which will publish build status changes to a Clour Run service which will publish these into Slack channel. 
+In this demo we will create a push subscription to the build status queue in Cloud PubSub which will publish build status changes to a Cloud Run service which will publish these into Slack channel.
 
 * Review notification service (https://github.com/mchmarny/pubsubnotifs)
   * Handler (receives Build status from PubSub push)
@@ -42,18 +42,18 @@ gcloud pubsub subscriptions create cloud-build-push-notif-demo \
 ```
 
 * Repeat release tagging process (https://github.com/mchmarny/maxprime)
-* Slack to show `WORKING` notification 
-  * Use link to Cloud Build status 
+* Slack to show `WORKING` notification
+  * Use link to Cloud Build status
 * Overview, builds on previous use-case
 ![Cloud Build Integration with Slack Notifications](img/cbn.png "Cloud Build Integration with Slack Notifications")
-* Back to Slack to show `SUCCESS` notification 
+* Back to Slack to show `SUCCESS` notification
 
 
 ### Demo 3 - Microservices (External/Internal Services)
 
 In this demo we will show simple microservice using GCP Vision API
 
-#### Logog Service
+#### Logo Service
 
 ![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
 
@@ -82,12 +82,12 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-#### Logog Service (Internal)
+#### Logo Service (Internal)
 
 * Cloud Run (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
   * Connectivity in Details to `Internal`
 
-#### Direct Logog Service Access 404
+#### Direct Logo Service Access 404
 
 ```shell
 curl -H "Content-Type: application/json" -v \
