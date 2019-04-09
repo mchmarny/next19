@@ -12,7 +12,6 @@
 * IDE
 ```shell
 cd /go/src/github.com/mchmarny/knative-build-status-notifs
-code .
 ```
 * Open
   * Notification service (https://github.com/mchmarny/knative-build-status-notifs):
@@ -87,7 +86,6 @@ slacker-build-status-notifier  True                default   http://build-notif.
 * IDE
 ```shell
 cd /go/src/github.com/mchmarny/twitter
-code .
 ```
 * Open
   * Twitter viewer app (https://tevents.demo.knative.tech)
@@ -218,7 +216,6 @@ twitter-events-viewer   True              default   http://build-notif.demo.svc.
 
 * View UI again (https://tevents.demo.knative.tech)
 * Ask audience to tweet something with the term defined in the source's `--query=KnativeNextDemo` argument
-
 
 
 ## Reset
