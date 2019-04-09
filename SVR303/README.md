@@ -29,7 +29,7 @@ In this demo we will create a push subscription to the build status queue in Clo
 
 ```shell
 gcloud beta run deploy pubsubnotifs \
-    --image gcr.io/s9-demo/pubsubnotifs:latest \
+    --image gcr.io/s9-demo/pubsubnotifs@sha256:a24464077851c77b8878b2509158c679d217faad718c444f0401e0f914621772 \
     --set-env-vars=NOTIFS_FOR_APP=maxprime,SLACK_API_TOKEN=$SLACK_API_TOKEN,SLACK_BUILD_STATUS_CHANNEL=$SLACK_BUILD_STATUS_CHANNEL,KNOWN_PUBLISHER_TOKENS=$KNOWN_PUBLISHER_TOKENS
 ```
 
