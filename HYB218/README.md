@@ -9,6 +9,12 @@ In this demo we will show simple microservice using GCP Vision API
 
 #### Logo Service
 
+```shell
+gcloud beta run deploy klogo \
+    --image=gcr.io/s9-demo/klogo@sha256:c91c08d92323d8d9e2b6c899249dde343ed61997db62d58deadb946b6365663d \
+    --set-env-vars=RELEASE=v0.0.3,GCP_PROJECT_ID=s9-demo,GIN_MODE=release
+```
+
 ![Microservice with Vision API on Cloud Run](../SVR303/img/ms-1.png "Microservice with Vision API on Cloud Run")
 
 * Image (https://storage.googleapis.com/kdemo-logos/google.png)
