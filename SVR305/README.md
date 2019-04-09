@@ -14,6 +14,10 @@ cd /go/src/github.com/mchmarny/knative-build-status-notifs
 code .
 ```
 
+Release tag in GitHub (https://github.com/mchmarny/maxprime)
+
+Cloud Build status (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+
 ### Notification service
 
 Source code (https://github.com/mchmarny/knative-build-status-notifs):
@@ -240,4 +244,6 @@ Should return
 ```shell
 build-notif   build-notif.demo.knative.tech   build-notif-j7nk5   build-notif-j7nk5   True
 ```
+
+
 
