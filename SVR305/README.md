@@ -84,10 +84,13 @@ slacker-build-status-notifier  True                default   http://build-notif.
 
 ### Setup
 
+* IDE
 ```shell
 cd /go/src/github.com/mchmarny/twitter
 code .
 ```
+* Open
+  * Twitter viewer app (https://tevents.demo.knative.tech)
 
 ### UI
 
@@ -98,7 +101,7 @@ Open https://tevents.demo.knative.tech (should be empty if soure/trigger were cl
 
 Apply following YAML (`config/source.yaml`)
 
-> `--query=KnativeDemo` is where you can define the Twitter search term (hashtag or simple string). Secrets have already been configured.
+> `--query=KnativeNextDemo` is where you can define the Twitter search term (hashtag or simple string). Secrets have already been configured.
 
 
 
@@ -109,7 +112,7 @@ metadata:
   name: twitter-source
 spec:
   args:
-  - --query=KnativeDemo
+  - --query=KnativeNextDemo
   env:
   - name: TWITTER_CONSUMER_KEY
     valueFrom:
@@ -214,7 +217,7 @@ twitter-events-viewer   True              default   http://build-notif.demo.svc.
 ### Execute
 
 * View UI again (https://tevents.demo.knative.tech)
-* Ask audience to tweet something with the term defined in the source's `--query=KnativeDemo` argument
+* Ask audience to tweet something with the term defined in the source's `--query=KnativeNextDemo` argument
 
 
 
