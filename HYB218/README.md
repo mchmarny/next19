@@ -39,7 +39,7 @@ gcloud beta run deploy kdemo \
 * Demo UI (https://kdemo.next.demome.tech/)
 
 
-#### Circumvent Auth
+#### Circumvent Authentication App
 
 ![Auth Microservice fronting Logo Service](../SVR303/img/ms-3.png "Auth Microservice fronting Logo Service")
 
@@ -49,10 +49,9 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-#### Logo Service (Internal)
+#### Set Logo Service as "Internal"
 
-* Cloud Run (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
-  * Connectivity in Details to `Internal`
+Set connectivity in details to `Internal` in Cloud Run (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
 
 #### Direct Logo Service Access 404
 
@@ -64,7 +63,7 @@ curl -H "Content-Type: application/json" -v \
 
 #### Overview
 
-* Internal microservcies (Logo and User for metering)
+* Internal microservcies (Logo and + User service for metering)
 ![Microservices on Cloud Run](../SVR303/img/ms-4.png "Microservices on Cloud Run")
 
 
