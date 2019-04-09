@@ -9,14 +9,14 @@
 
 ### Setup
 
+* IDE
 ```shell
 cd /go/src/github.com/mchmarny/knative-build-status-notifs
 code .
 ```
-
-Release tag in GitHub (https://github.com/mchmarny/maxprime)
-
-Cloud Build status (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
+* Open
+  * Release tag in GitHub (https://github.com/mchmarny/maxprime)
+  * Cloud Build status (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
 
 ### Notification service
 
