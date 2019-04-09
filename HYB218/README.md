@@ -9,7 +9,7 @@ In this demo we will show simple microservice using GCP Vision API
 
 #### Logo Service
 
-Deploy
+Deploy (gcloud or [Cloud Run UI](https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo))
 
 ```shell
 gcloud beta run deploy klogo \
