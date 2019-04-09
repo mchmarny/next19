@@ -9,18 +9,18 @@ In this demo we will show simple microservice using GCP Vision API
 
 ![Microservice with Vision API on Cloud Run](img/ms-1.png "Microservice with Vision API on Cloud Run")
 
-* Image (https://storage.googleapis.com/kdemo-logos/google.png)
+* Image (https://storage.googleapis.com/kdemo-logos/k8s.png)
 * Image service ("Google" logo identified)
 
 ```shell
 curl -H "Content-Type: application/json" \
-     -d '{ "id": "logo1", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
+     -d '{ "id": "logo1", "url": "https://storage.googleapis.com/kdemo-logos/k8s.png" }' \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
 ### Authentication App
 
-![Auth Microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
+![Auth microservice fronting Logo Service](img/ms-2.png "Auth Microservice fronting Logo Service")
 * Demo UI (https://kdemo.next.demome.tech/)
 
 
@@ -30,7 +30,7 @@ curl -H "Content-Type: application/json" \
 
 ```shell
 curl -H "Content-Type: application/json" \
-     -d '{ "id": "logo2", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
+     -d '{ "id": "logo2", "url": "https://storage.googleapis.com/kdemo-logos/k8s.png" }' \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
@@ -43,13 +43,13 @@ curl -H "Content-Type: application/json" \
 
 ```shell
 curl -H "Content-Type: application/json" -v \
-     -d '{ "id": "logo3", "url": "https://storage.googleapis.com/kdemo-logos/google.png" }' \
+     -d '{ "id": "logo3", "url": "https://storage.googleapis.com/kdemo-logos/k8s.png" }' \
      -X POST https://klogo.next.demome.tech/
 ```
 
 ### Overview
 
-* Internal microservcies (Logo and User for metering)
+* Internal microservices (Logo and User for metering)
 ![Microservices on Cloud Run](img/ms-4.png "Microservices on Cloud Run")
 
 
