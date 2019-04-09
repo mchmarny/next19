@@ -8,6 +8,11 @@
 * [DEMO-2](DEMO-2.md)
 * [DEMO-3](DEMO-3.md)
 
+Open tabs:
+
+* [Tab 1](http://aerial-tiler.default.130.211.124.0.xip.io/preview?url=gs://3f23a0a4-3381-4382-b273-9f45e936b91b/analytics-ready/pansharpened/DIM_SPOT6_PMS_201809181528155_ORT_3317561101.tif&pmin=2&pmax=98&linearStretch=true#14/35.28942974756265/-77.58146996050691)
+* [Tab 2](http://aerial-tiler.default.130.211.124.0.xip.io/preview?url=gs://3f23a0a4-3381-4382-b273-9f45e936b91b/analytics-ready/pansharpened/DIM_SPOT6_PMS_201809181528155_ORT_3317561101.tif#14/35.28942974756265/-77.58146996050691)
+
 ## Reset
 
 Run this before each demo to set know state
