@@ -67,7 +67,7 @@ slacker-build-status-notifier  True                default   http://build-notif.
 
 ### Execute
 
-* Create a release tag (e.g. release-v0.0.*) in GitHub (https://github.com/mchmarny/maxprime)
+* Create a release tag (e.g. release-v0.0.*) in GitHub (https://github.com/mchmarny/maxprime/releases/new)
 * Check Cloud Build for build status (https://console.cloud.google.com/cloud-build/builds?project=s9-demo)
 * View notification in Slack (#build-status)
 
