@@ -6,9 +6,9 @@
 In this demo we will create a push subscription to the build status queue in Cloud PubSub which will publish build status changes to a Cloud Run service which will publish these into Slack channel.
 
 * Review notification service (https://github.com/mchmarny/pubsubnotifs)
-  * Handler (receives Build status from PubSub push)
-  * Sender (send builds Slack message from status and sends)
-* Deploy it to Cloud Run (highlight conf, shared token)
+  * **Handler** (receives Build status from PubSub push)
+  * **Sender** (send builds Slack message from status and sends)
+* Deploy it to Cloud Run (env vars, shared token)
 
 ```shell
 gcloud beta run deploy pubsubnotifs \
