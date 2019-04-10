@@ -20,6 +20,7 @@ Mark:
 * https://github.com/mchmarny/maxprime
 * https://github.com/mchmarny/pubsubnotifs
 * https://kdemo.next.demome.tech/
+* https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?organizationId=433637338589&project=s9-demo
 
 ## Reset
 
