@@ -10,8 +10,17 @@
 
 Open tabs:
 
+Mike:
 * [Tab 1](http://aerial-tiler.default.130.211.124.0.xip.io/preview?url=gs://3f23a0a4-3381-4382-b273-9f45e936b91b/analytics-ready/pansharpened/DIM_SPOT6_PMS_201809181528155_ORT_3317561101.tif#14/35.28942974756265/-77.58146996050691)
 * [Tab 2](http://aerial-tiler.default.130.211.124.0.xip.io/preview?url=gs://3f23a0a4-3381-4382-b273-9f45e936b91b/analytics-ready/pansharpened/DIM_SPOT6_PMS_201809181528155_ORT_3317561101.tif&pmin=2&pmax=98&linearStretch=true#14/35.28942974756265/-77.58146996050691)
+
+Mark:
+* http://maxprime.next.demome.tech/
+* https://console.cloud.google.com/cloud-build/builds?project=s9-demo
+* https://github.com/mchmarny/maxprime
+* https://github.com/mchmarny/pubsubnotifs
+* https://kdemo.next.demome.tech/
+* https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?organizationId=433637338589&project=s9-demo
 
 ## Reset
 
