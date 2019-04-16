@@ -1,9 +1,13 @@
-# SVR303 - Build Solutions With Serverless on Kubernetes Engine
+# Build Solutions With Serverless on Kubernetes Engine
 
 
 ## Demo 3 - Microservices (External/Internal Services)
 
-In this demo we will show simple microservice using GCP Vision API
+In this demo we will show simple microservice using GCP Vision API. The source code for the applications used in this demo:
+
+* klogo - https://github.com/mchmarny/klogo
+* kuser - https://github.com/mchmarny/kuser
+* kdemo - https://github.com/mchmarny/kdemo
 
 ### Logo Service
 
