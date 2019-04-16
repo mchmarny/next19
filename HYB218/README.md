@@ -4,9 +4,13 @@
 
 ## Demo - Microservices (External/Internal Services)
 
-In this demo we will show simple microservice using GCP Vision API
+In this demo we will show simple microservice using GCP Vision API. The source code for the applications used in this demo:
 
-#### Logo Service
+* klogo - https://github.com/mchmarny/klogo
+* kuser - https://github.com/mchmarny/kuser
+* kdemo - https://github.com/mchmarny/kdemo
+
+### Logo Service
 
 Deploy service usign gcloud
 
@@ -26,7 +30,7 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-#### Authentication App
+### Authentication App
 
 ```shell
 gcloud beta run deploy kdemo \
@@ -38,7 +42,7 @@ gcloud beta run deploy kdemo \
 * Demo UI (https://kdemo.next.demome.tech/)
 
 
-#### Circumvent Authentication App
+### Circumvent Authentication App
 
 ![Auth Microservice fronting Logo Service](../SVR303/img/ms-3.png "Auth Microservice fronting Logo Service")
 
@@ -48,11 +52,11 @@ curl -H "Content-Type: application/json" \
      -X POST https://klogo.next.demome.tech/ | jq "."
 ```
 
-#### Set Logo Service as "Internal"
+### Set Logo Service as "Internal"
 
 Set connectivity in details to `Internal` in Cloud Run (https://console.cloud.google.com/run/detail/cluster/us-west1-c/next/next/klogo/revisions?project=s9-demo)
 
-#### Direct Logo Service Access 404
+### Direct Logo Service Access 404
 
 ```shell
 curl -H "Content-Type: application/json" -v \
@@ -60,7 +64,7 @@ curl -H "Content-Type: application/json" -v \
      -X POST https://klogo.next.demome.tech/
 ```
 
-#### Overview
+### Overview
 
 * Internal microservcies (Logo and + User service for metering)
 ![Microservices on Cloud Run](../SVR303/img/ms-4.png "Microservices on Cloud Run")
