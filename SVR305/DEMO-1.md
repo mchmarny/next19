@@ -1,5 +1,7 @@
 # Generating Events from Your Internal Systems with Knative
 
+> Note, this demo has some project specific dependencies. When possible I identified these in comments or defined them as environment variable to allow you to easily replace them. Still, in some cases like custom domain you will have to substitute `*.next.demome.tech` for your own domain. Please open an issue if you come across any other... issue.
+
 ## Demo 1 - Cloud Build status event triggering Knative service
 
 ![Cloud Build Integration with Slack Notifications](img/demo1.png "Cloud Build Integration with Slack Notifications")
