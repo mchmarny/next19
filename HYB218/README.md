@@ -1,6 +1,6 @@
 # Run a serverless platform anywhere with Kubernetes and Knative
 
-> Make sure to [reset](#Reset) environment before demos
+> Note, this demo has some project specific dependencies. When possible I identified these in comments or defined them as environment variable to allow you to easily replace them. Still, in some cases like custom domain you will have to substitute `*.next.demome.tech` for your own domain. Please open an issue if you come across any other... issue.
 
 ## Demo - Microservices (External/Internal Services)
 
