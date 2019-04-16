@@ -1,5 +1,7 @@
 # Build Solutions With Serverless on Kubernetes Engine
 
+> Note, this demo has some project specific dependencies. When possible I identified these in comments or defined them as environment variable to allow you to easily replace them. Still, in some cases like custom domain you will have to substitute `*.next.demome.tech` for your own domain. Please open an issue if you come across any other... issue.
+
 ## Demo 2 - Cloud Build Notification Events in Slack
 
 In this demo we will create a push subscription to the build status queue in Cloud PubSub which will publish build status changes to a Cloud Run service which will publish these into Slack channel.
