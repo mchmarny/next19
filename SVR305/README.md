@@ -1,4 +1,4 @@
-# SVR305 - Generating Events from Your Internal Systems with Knative
+# Generating Events from Your Internal Systems with Knative
 
 > Make sure to [reset](#Reset) environment before demos
 
