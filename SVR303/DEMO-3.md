@@ -3,11 +3,7 @@
 
 ## Demo 3 - Microservices (External/Internal Services)
 
-In this demo we will show simple microservice using GCP Vision API. The longer version of this demo is covered in [HYB218](../HYB218/README.md)The source code for the applications used in this demo:
-
-* klogo - https://github.com/mchmarny/klogo
-* kuser - https://github.com/mchmarny/kuser
-* kdemo - https://github.com/mchmarny/kdemo
+In this demo we will show simple microservice using GCP Vision API. The longer version of this demo with source code links to the microservices used in this demo is covered in [HYB218](../HYB218/README.md).
 
 ### Logo Service
 
