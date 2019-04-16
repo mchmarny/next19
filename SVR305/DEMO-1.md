@@ -1,4 +1,4 @@
-# SVR305 - Generating Events from Your Internal Systems with Knative
+# Generating Events from Your Internal Systems with Knative
 
 ## Demo 1 - Cloud Build status event triggering Knative service
 
