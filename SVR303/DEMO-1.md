@@ -7,6 +7,7 @@ Cloud Run takes images, in this demo we will show you how to create your service
 
 * MaxPrime (https://maxprime.next.demome.tech/)
   * Highlight release number, follow link
+  * Overview the Cloud Build [configuration file](https://github.com/mchmarny/maxprime/blob/master/deployments/cloudbuild.yaml)
   * Create new release (release-v0.0.*)
 * Cloud Build in console (https://console.cloud.google.com/cloud-build/builds)
   * Navigate to your GCP project
