@@ -1,4 +1,4 @@
-# HYB218 - Run a serverless platform anywhere with Kubernetes and Knative
+# Run a serverless platform anywhere with Kubernetes and Knative
 
 > Make sure to [reset](#Reset) environment before demos
 
