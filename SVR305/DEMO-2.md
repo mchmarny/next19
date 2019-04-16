@@ -1,4 +1,4 @@
-# SVR305 - Generating Events from Your Internal Systems with Knative
+# Generating Events from Your Internal Systems with Knative
 
 ## Demo 2 - How to install Twitter event source and wire it to Knative service
 
