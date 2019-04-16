@@ -8,12 +8,7 @@
 
 ### Setup
 
-* IDE
-```shell
-cd /go/src/github.com/mchmarny/twitter
-```
-* Open
-  * Twitter viewer app (https://tevents.demo.knative.tech)
+Twitter viewer app (https://tevents.demo.knative.tech)
 
 ### UI
 
@@ -139,8 +134,10 @@ twitter-events-viewer   True              default   http://build-notif.demo.svc.
 
 ### Execute
 
-* View UI again (https://tevents.demo.knative.tech)
-* Ask audience to tweet something with the term defined in the source's `--query=KnativeNextDemo` argument
+View UI again (https://tevents.demo.knative.tech)
+
+
+> Ask audience to tweet something with the term defined in the source's `--query=KnativeNextDemo` argument. Note, this could result in some NSFW tweets being displayed!
 
 
 ## Reset
