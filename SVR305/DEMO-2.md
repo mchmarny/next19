@@ -1,7 +1,5 @@
 # Generating Events from Your Internal Systems with Knative
 
-> Note, this demo has some project specific dependencies. When possible I identified these in comments or defined them as environment variable to allow you to easily replace them. Still, in some cases like custom domain you will have to substitute `*.next.demome.tech` for your own domain. Please open an issue if you come across any other... issue.
-
 ## Prerequisites
 
 * Setup [Knative Serving](https://github.com/knative/docs/blob/master/docs/install)
