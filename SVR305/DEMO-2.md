@@ -4,14 +4,13 @@
 
 * Setup [Knative Serving](https://github.com/knative/docs/blob/master/docs/install)
 * Setup [Knative Eventing](https://github.com/knative/docs/blob/master/docs/eventing)
+* Setup [Twitter viewer app](https://github.com/mchmarny/tevents)
 
 ## Demo 2 - How to install Twitter event source and wire it to Knative service
 
 ![Twitter event source and wire it to Knative service](img/demo2.png "Twitter event source and wire it to Knative service")
 
 ### Setup
-
-Twitter viewer app (https://tevents.demo.knative.tech)
 
 ### UI
 
