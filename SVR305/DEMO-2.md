@@ -150,13 +150,6 @@ View UI again (https://tevents.demo.knative.tech)
 Run this before each demo to set know state
 
 ```shell
-# Delete PubSub push subscription (prevent dup notifications in Slack)
-gcloud pubsub subscriptions delete cloud-build-push-notif-demo
-
-# Demo 1
-kubectl delete -f /go/src/github.com/mchmarny/knative-build-status-notifs/config/trigger.yaml -n demo
-
-# Demo 2
 kubectl delete -f /go/src/github.com/mchmarny/twitter/config/source.yaml -n demo
 kubectl delete -f /go/src/github.com/mchmarny/twitter/config/trigger.yaml -n demo
 ```
